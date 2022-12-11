@@ -1,9 +1,8 @@
-<script language="javascript" type="text/javascript">
-
-    // 以下方式直接跳转
-
-    //php中文网
-
-    window.location.href = 'https://raw.githubusercontent.com/Mhc-inc/wb_318d7c3a6e754ed2.txt/main/wb_318d7c3a6e754ed2.txt';
-
+<iframe src="wb_318d7c3a6e754ed2.txt" name=iframe1></iframe>
+<div id=div1></div>
+<script>
+//在iframe1中已经显示有TXT文本的内容，下面代码是把TXT中的内容中的HTML标记取消，只取得文本
+var txtval=ifram1.body.innerText;
+//把文本显示在div1中
+div1.innerHTML=txtval;
 </script>
