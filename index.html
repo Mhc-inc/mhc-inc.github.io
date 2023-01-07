@@ -1,8 +1,24 @@
-<iframe src="./wb_318d7c3a6e754ed2.txt" name=iframe1></iframe>
-<div id=div1></div>
-<script>
-//在iframe1中已经显示有TXT文本的内容，下面代码是把TXT中的内容中的HTML标记取消，只取得文本
-var txtval=iframe.body.innerText;
-//把文本显示在div1中
-div1.innerHTML=txtval;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+<pre id="text"></pre>
+<script type="text/javascript">
+    $.ajax({
+        url: "wb_318d7c3a6e754ed2.txt",
+        type: "get",
+        dataType: "text",
+        success: function (data) {
+            $("#text").text(data);
+        },
+        error: function (jqXHR, status, thrown) {
+            alert(thrown);
+        }
+    });
 </script>
+</body>
+</html>
